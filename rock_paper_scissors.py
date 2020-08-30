@@ -5,7 +5,7 @@ pointsBot = 0
 while True:
     choice = ["R", "P", "S"]
     bot = random.choice(choice)
-    gamer = str(input("Rock, Paper or Scissors?  (R=Rock, P=Paper, S=Scissors) "))
+    gamer = str(input("Rock, Paper or Scissors? ").lower()[0])
 
 # Rock
     if bot == "R" and gamer.lower().strip() == "r":
