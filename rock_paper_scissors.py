@@ -5,10 +5,11 @@ pointsBot = 0
 while True:
     choice = ["R", "P", "S"]
     bot = random.choice(choice)
-    gamer = str(input("Rock, Paper or Scissors? ").lower()[0])
+    print("--------------------------------------------------")
+    gamer = str(input("Rock, Paper or Scissors? ").lower().strip()[0])
 
 # Rock
-    if bot == "R" and gamer.lower().strip() == "r":
+    if bot == "R" and gamer == "r":
         time.sleep(0.5)
         print("the bot also chose rock, so it's a tie")
         print("your points:", pointsGamer, "bot points:", pointsBot)
@@ -19,7 +20,7 @@ while True:
             print("really?")
             break
 
-    elif bot == "R" and gamer.lower().strip() == "p":
+    elif bot == "R" and gamer == "p":
         time.sleep(0.5)
         print("the bot chose rock and  you chose paper, so.. you win!")
         pointsGamer += 1
@@ -31,7 +32,7 @@ while True:
             print("really?")
             break
 
-    elif bot == "R" and gamer.lower().strip() == "s":
+    elif bot == "R" and gamer == "s":
         time.sleep(0.5)
         print("the bot chose rock and you chose scissors, so... you lose....")
         pointsBot += 1
@@ -43,7 +44,7 @@ while True:
             print("really?")
             break
     # paper
-    if bot == "P" and gamer.lower().strip() == "p":
+    if bot == "P" and gamer == "p":
         time.sleep(0.5)
         print("the bot also chose paper, so it's a tie")
         print("your points:", pointsGamer, "bot points:", pointsBot)
@@ -53,7 +54,7 @@ while True:
         if next.lower().strip() != "y":
             print("really?")
             break
-    elif bot == "P" and gamer.lower().strip() == "s":
+    elif bot == "P" and gamer == "s":
         time.sleep(0.5)
         print("the bot chose paper and you chose scissors, so.... you win!")
         pointsGamer += 1
@@ -64,7 +65,7 @@ while True:
         if next.lower().strip() != "y":
             print("really?")
             break
-    elif bot == "P" and gamer.lower().strip() == "r":
+    elif bot == "P" and gamer == "r":
         time.sleep(0.5)
         print("the bot chose paper and you chose rock, so.... you lose...")
         pointsBot += 1
@@ -76,7 +77,7 @@ while True:
             print("really?")
             break
     # Scissors
-    if bot == "S" and gamer.lower().strip() == "s":
+    if bot == "S" and gamer == "s":
         time.sleep(0.5)
         print("the bot also chose scissors, so it's a tie")
         print("your points:", pointsGamer, "bot points:", pointsBot)
@@ -86,7 +87,7 @@ while True:
         if next.lower().strip() != "y":
             print("really?")
             break
-    elif bot == "S" and gamer.lower().strip() == "r":
+    elif bot == "S" and gamer == "r":
         time.sleep(0.5)
         print("the bot chose scissors and you chose rock, so.... you win!")
         pointsGamer += 1
@@ -97,7 +98,7 @@ while True:
         if next.lower().strip() != "y":
             print("really?")
             break
-    elif bot == "S" and gamer.lower().strip() == "p":
+    elif bot == "S" and gamer == "p":
         time.sleep(0.5)
         print("the bot chose scissors and you chose paper, so... you lose...")
         pointsBot += 1
